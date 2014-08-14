@@ -110,7 +110,7 @@ Assuming we loaded __en-US__, __en__ and __dev__ resources for two namespaces ('
 	    lng: 'en-US',
 	    ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'}
 	}, function() {
-	    $('.nav').i18n();
+	    i18n.localizeElems(document.body.querySelector('nav'));
 	});
 
 For missing keys (if the option 'addMissing' is set to true) will be send to server with actual text as defaultValue.
