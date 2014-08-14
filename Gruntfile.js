@@ -95,6 +95,10 @@ module.exports = function(grunt) {
         src: ['src/amd.jquery.js'],
         dest: 'bin/i18next.amd.withJQuery-latest.js'
       },
+      withoutjquery:{
+        src:['src/withoutjquery.js'],
+        dest:'bin/i18next.withoutJQuery-latest.js'
+      },
       spec: {
         src: ['spec/spec.js'],
         dest: 'test/test.js'
@@ -132,6 +136,10 @@ module.exports = function(grunt) {
       amdjquery: {
         src: ['bin/i18next.amd.withJQuery-latest.js'],
         dest: 'release/i18next.amd.withJQuery-<%= meta.version %>.min.js'
+      },
+      withoutjquery:{
+        src:['bin/i18next.withoutJQuery-latest.js'],
+        dest:'release/i18next.withoutJQuery-<%= meta.version %>.min.js'
       },
       release_latest: {
         src: ['bin/i18next-latest.js'],
