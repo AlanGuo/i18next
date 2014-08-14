@@ -96,6 +96,23 @@ Assuming we loaded __en-US__, __en__ and __dev__ resources for two namespaces ('
 	    $('.nav').i18n();
 	});
 
+## or you don't want to use jquery you can write like this
+
+	// given
+	<ul class="nav">
+		<li class="active"><a href="#" data-i18n="nav.home">home</a></li>
+		<li><a href="#" data-i18n="nav.1">link1</a></li>
+		<li><a href="#" data-i18n="nav.2">link2</a></li>
+	</ul>
+
+	// Run the following javascript to translate all elements having the _data-i18n_ attribute:
+	$.i18n.init({
+	    lng: 'en-US',
+	    ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'}
+	}, function() {
+	    $('.nav').i18n();
+	});
+
 For missing keys (if the option 'addMissing' is set to true) will be send to server with actual text as defaultValue.
 
 # Sample usage
